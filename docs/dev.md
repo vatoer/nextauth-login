@@ -10,3 +10,9 @@ mkdir nexauth-login
 cd nexauth-login
 pnpm create next-app@latest . --typescript --tailwind --eslint
 ```
+
+install shadcn
+
+```sh
+pnpm dlx shadcn-ui@latest init
+```
