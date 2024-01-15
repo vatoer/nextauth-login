@@ -39,3 +39,6 @@ next-env.d.ts
 # ignore generated types
 
 prisma/*/generated/*
+
+# logo
+logo.png
