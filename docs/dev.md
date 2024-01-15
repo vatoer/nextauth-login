@@ -136,3 +136,46 @@ add your google id and secret to `.env`
 GOOGLE_CLIENT_ID="YOURCLIENTID.apps.googleusercontent.com"
 GOOGLE_CLIENT_SECRET="YOUR-CLIENTSECRET"
 ```
+
+## create protected route
+
+```sh
+touch protected/page.tsx
+```
+
+## Add API route
+
+tambahkan password pada model user untuk support local credentials `prisma/db-auth/schema.prisma`
+
+```prisma
+  password      String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+```
+
+jalankan migrate
+
+```sh
+pnpm prisma migrate dev --schema ./prisma/db-auth/schema.prisma
+```
+
+
+pastikan sebelum membuat route, generate prisma client
+
+```sh
+pnpm prisma generate --schema ./prisma/db-auth/schema.prisma
+```
+
+```sh
+pnpm add bcryptjs
+pnpm add @types/bcryptjs -D
+```
+
+buat file-file berikut
+
+```sh
+touch lib/db-auth.ts
+touch lib/auth.ts
+touch api/auth/[...nextauth]/route.ts
+```
+

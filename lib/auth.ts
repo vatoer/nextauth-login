@@ -1,4 +1,4 @@
-import { db } from "@/lib/db-auth";
+import { dbAuth } from "@/lib/db-auth";
 import { compare, hash } from "bcryptjs";
 import { randomBytes } from "crypto";
 import {
@@ -39,7 +39,7 @@ export const authOptions: NextAuthOptions = {
           return null;
         }
 
-        const user = await db.user.findUnique({
+        const user = await dbAuth.user.findUnique({
           where: {
             email: credentials.email,
           },
@@ -78,7 +78,7 @@ export const authOptions: NextAuthOptions = {
 
         const img = image || "no-image.png";
 
-        const user = await db.user.upsert({
+        const user = await dbAuth.user.upsert({
           where: {
             email: profile.email,
           },
