@@ -159,7 +159,6 @@ jalankan migrate
 pnpm prisma migrate dev --schema ./prisma/db-auth/schema.prisma
 ```
 
-
 pastikan sebelum membuat route, generate prisma client
 
 ```sh
@@ -179,3 +178,40 @@ touch lib/auth.ts
 touch api/auth/[...nextauth]/route.ts
 ```
 
+### use middleware to implement protection to protected route
+
+create file `middleware.ts`
+
+```ts
+// middleware.ts
+// This is an example of how to use middleware with NextAuth.js.
+import { withAuth } from "next-auth/middleware";
+
+export default withAuth(
+  // `withAuth` augments your `Request` with the user's token.
+  // The middleware function will only be invoked if the authorized callback returns true.
+  function middleware(req) {
+    console.log("[MIDDLEWARE]", req.nextauth.token);
+  },
+  {
+    callbacks: {
+      authorized: ({ token }) => {
+        console.log("[AUTHORIZED]", token);
+        if (!token) return false;
+
+        return true;
+      },
+    },
+  }
+);
+
+export const config = { matcher: ["/protected"] };
+```
+
+if the route match 'protected' it will re route to route signin -- configured in -- `lib/auth.ts` as described [here](#add-api-route)
+
+## create signin route
+
+```sh
+touch "(auth)/signin/page.tsx"
+```
