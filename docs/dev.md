@@ -40,7 +40,7 @@ pnpm add -D prisma
 - create prisma schema
 
 ```sh
-pnpm prisma init 
+pnpm prisma init
 ```
 
 we will move file `prisma/schema.prisma` to `prisma/db-auth`
@@ -124,7 +124,7 @@ pnpm prisma migrate dev --schema ./prisma/db-auth/schema.prisma
 ## prepare nextauth provider
 
 - you must have google account to use google credentials service
-  
+
   // TODO CREATE doc on google credentials service
 
 go to <https://console.cloud.google.com/>
@@ -214,4 +214,8 @@ if the route match 'protected' it will re route to route signin -- configured in
 
 ```sh
 touch "(auth)/signin/page.tsx"
+```
+
+```sh
+pnpm dlx shadcn-ui@latest add button
 ```

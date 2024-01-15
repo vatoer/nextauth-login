@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ButtonWithGoogle } from "../../_components/button-with-google";
 const LoginForm = () => {
   return (
     <>
@@ -10,9 +11,13 @@ const LoginForm = () => {
           height={72}
           className="mx-auto rounded-full"
         />
-        <h1 className="text-3xl font-bold">Sign in</h1>
-        <p className="text-sm text-gray-500">to continue to your account</p>
       </div>
+      <form className="flex flex-col gap-4">
+        <div className="flex items-center before:flex-1 before:border-t before:border-gray-300 before:mt-0.5 after:flex-1 after:border-t after:border-gray-300 after:mt-0.5">
+          <p className="text-center font-semibold mx-4 mb-0">OR</p>
+        </div>
+        <ButtonWithGoogle />
+      </form>
     </>
   );
 };
