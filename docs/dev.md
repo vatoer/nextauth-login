@@ -219,3 +219,9 @@ touch "(auth)/signin/page.tsx"
 ```sh
 pnpm dlx shadcn-ui@latest add button
 ```
+
+## create user Button
+
+```sh
+pnpm dlx shadcn-ui@latest add avatar dropdown-menu skeleton
+```
