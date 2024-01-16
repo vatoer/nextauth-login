@@ -9,9 +9,6 @@ export default function ProtectedPage() {
       <h1>Protected Page</h1>
       <p>This page is protected.</p>
       <UserButton />
-      <div>
-        <ButtonSignout />
-      </div>
     </div>
   );
 }
