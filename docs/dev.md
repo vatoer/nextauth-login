@@ -225,3 +225,5 @@ pnpm dlx shadcn-ui@latest add button
 ```sh
 pnpm dlx shadcn-ui@latest add avatar dropdown-menu skeleton
 ```
+
+## add Credentials Provider

@@ -26,7 +26,7 @@ export const UserButton = () => {
 
   return (
     <>
-      {session && status === "authenticated" && (
+      {session && (
         <DropdownMenu>
           <DropdownMenuTrigger className="items-center flex outline-none">
             <Avatar>
