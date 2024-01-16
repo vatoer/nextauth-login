@@ -1,6 +1,10 @@
+"use client";
 import Image from "next/image";
+import { useSearchParams } from "next/navigation";
 import { ButtonWithGoogle } from "../../_components/button-with-google";
 const LoginForm = () => {
+  const callbackUrl = useSearchParams().get("callbackUrl") ?? "/";
+
   return (
     <>
       <div className="flex flex-col items-center gap-2 mb-4">
@@ -16,7 +20,7 @@ const LoginForm = () => {
         <div className="flex items-center before:flex-1 before:border-t before:border-gray-300 before:mt-0.5 after:flex-1 after:border-t after:border-gray-300 after:mt-0.5">
           <p className="text-center font-semibold mx-4 mb-0">OR</p>
         </div>
-        <ButtonWithGoogle />
+        <ButtonWithGoogle callbackUrl={callbackUrl} />
       </form>
     </>
   );

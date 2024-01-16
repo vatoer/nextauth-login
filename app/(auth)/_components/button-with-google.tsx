@@ -15,6 +15,7 @@ export const ButtonWithGoogle = ({
   };
   return (
     <Button
+      type="button"
       onClick={handleLoginWithGoogle}
       variant={"outline"}
       className="flex justify-center items-center gap-x-2"
