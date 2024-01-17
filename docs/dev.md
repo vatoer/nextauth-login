@@ -227,3 +227,14 @@ pnpm dlx shadcn-ui@latest add avatar dropdown-menu skeleton
 ```
 
 ## add Credentials Provider
+
+<https://dev.to/deyemiobaa/adding-custom-validation-to-a-form-with-tailwindcss-1e7d#:~:text=Adding%20Custom%20Validation%20to%20Input,to%20force%20a%20certain%20style.>
+
+```sh
+pnpm add zod
+pnpm add react-hook-form
+pnpm add @hookform/resolvers
+```
+
+- create prisma seed
+  <https://github.com/prisma/prisma/discussions/20369>
