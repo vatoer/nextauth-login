@@ -244,3 +244,22 @@ pnpm add @hookform/resolvers
 create form signup
 
 create api signup
+
+## git delete branch signinpage
+
+<https://www.freecodecamp.org/news/how-to-delete-a-git-branch-both-locally-and-remotely/>
+
+`sh
+git branch -d signinpage
+git branch -d nextauth
+git push origin --delete signinpage
+git push origin --delete nextauth
+`
+
+<https://githowto.com/tagging_versions>
+
+tag with version v0.1.1
+
+`sh
+git tag -a v0.1.1 -m"version 0.1.1 fitur dasar signup dan login"
+`
