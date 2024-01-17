@@ -40,7 +40,7 @@ pnpm add -D prisma
 - create prisma schema
 
 ```sh
-pnpm prisma init 
+pnpm prisma init
 ```
 
 we will move file `prisma/schema.prisma` to `prisma/db-auth`
@@ -124,7 +124,7 @@ pnpm prisma migrate dev --schema ./prisma/db-auth/schema.prisma
 ## prepare nextauth provider
 
 - you must have google account to use google credentials service
-  
+
   // TODO CREATE doc on google credentials service
 
 go to <https://console.cloud.google.com/>
@@ -215,3 +215,32 @@ if the route match 'protected' it will re route to route signin -- configured in
 ```sh
 touch "(auth)/signin/page.tsx"
 ```
+
+```sh
+pnpm dlx shadcn-ui@latest add button
+```
+
+## create user Button
+
+```sh
+pnpm dlx shadcn-ui@latest add avatar dropdown-menu skeleton
+```
+
+## add Credentials Provider
+
+<https://dev.to/deyemiobaa/adding-custom-validation-to-a-form-with-tailwindcss-1e7d#:~:text=Adding%20Custom%20Validation%20to%20Input,to%20force%20a%20certain%20style.>
+
+```sh
+pnpm add zod
+pnpm add react-hook-form
+pnpm add @hookform/resolvers
+```
+
+- create prisma seed
+  <https://github.com/prisma/prisma/discussions/20369>
+
+## add signup
+
+create form signup
+
+create api signup

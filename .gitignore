@@ -40,5 +40,8 @@ next-env.d.ts
 
 prisma/*/generated/*
 
+# logo
+logo.png
+
 # ignore logo
 logo.png
