@@ -239,4 +239,8 @@ pnpm add @hookform/resolvers
 - create prisma seed
   <https://github.com/prisma/prisma/discussions/20369>
 
-## add signup 
+## add signup
+
+create form signup
+
+create api signup
