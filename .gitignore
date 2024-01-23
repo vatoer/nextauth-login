@@ -45,3 +45,10 @@ logo.png
 
 # ignore logo
 logo.png
+
+# ignore pnpm
+/.pnpm-store/
+
+# ignore lockfile
+pnpm-lock.yaml
+yarn.lock
