@@ -9,6 +9,7 @@
       "source.fixAll.eslint": "explicit",
       "source.sortImports": "explicit"
     },
+    "files.eol": "\n",
     "[prisma]": {
       "editor.defaultFormatter": "Prisma.prisma"
     }
